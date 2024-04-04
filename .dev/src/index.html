@@ -1,0 +1,592 @@
+<include src="./html/header.html"></include>
+
+<body class="page--home">
+	<include src="./html/nav.html"></include>
+
+	<main>
+		<section class="container-default" id="">
+			<div class="holder container-grid" id="startPage">
+				<div class="holder__img">
+					<img src="./assets/g.svg" alt="" />
+				</div>
+				<div class="holder__infos">
+					<h1 class="holder__title">
+						Qual solução da<br /><b>GreenYellow</b> é perfeita para<br />
+						<span>sua empresa?</span>
+					</h1>
+					<p class="holder__text">
+						<span>Introdução</span>
+						<br />
+						Chegou a hora de dar o próximo passo em direção <b>à transição energética na sua empresa!</b><br /><br />
+
+						Responda ao quiz e descubra qual das nossas quatro soluções<br />
+						— Shift Efficiency, Shift Production, Shift Services e Shift<br />
+						Mobility — dá o match perfeito com as necessidades do seu negócio.<br /><br />Responda às perguntas de forma honesta e, depois de alguns minutos,
+						você terá uma ideia de como podemos ajudar sua organização a
+						<b> economizar energia, consumir energias renováveis, reduzir a pegada de carbono e adotar práticas energéticas mais inteligentes.</b>
+					</p>
+					<p class="dif">Vamos transformar o consumo de energia em um avanço sustentável? 🌱💡</p>
+
+					<div class="holder__btn">
+						<buttton class="button" id="startBtn">começar quiz</buttton>
+					</div>
+				</div>
+			</div>
+			<div class="questions" id="questions">
+				<div class="questions__container container-grid" id="question-1">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">01</h3>
+							<h2 class="questions__title">Qual seu maior desafio atual com o consumo de energia elétrica?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Equipamentos antigos e que gastam muita energia.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Aumento da conta de luz por diferentes fatores. </p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Regras complicadas para migrar para o Mercado Livre de Energia e muita burocracia.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Necessidade de investir em projetos inovadores que demandam mais energia.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-1.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-2">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">02</h3>
+							<h2 class="questions__title">Qual é o principal objetivo ao buscar soluções de energia para sua empresa?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Melhorar a eficiência energética e reduzir custos operacionais.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Gerar energia renovável, como solar, para uso próprio e diminuir a dependência da rede local.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Otimizar a gestão de energia e participar do mercado livre de energia.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Implementar soluções de mobilidade elétrica, como pontos de recarga de carros elétricos.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-2.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-3">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">03</h3>
+							<h2 class="questions__title">Qual é o tamanho e a necessidade atual de energia da sua empresa?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Somos uma empresa pequena ou média, com demanda energética controlada.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Temos presença em várias localidades, demandando alto consumo de energia. </p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Estamos crescendo e buscamos soluções para otimizar nosso consumo energético e reduzir custos operacionais.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">
+											Somos uma empresa grande e buscamos soluções energéticas avançadas, como geração de energia local, armazenamento de energia, dentre
+											outros.
+										</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-3.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-4">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">04</h3>
+							<h2 class="questions__title">Sua empresa planeja crescer? Isso afetaria quanto de energia vocês precisam?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Não estamos pensando em crescer agora, então nossa necessidade de energia deve continuar a mesma.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Sim, queremos crescer e sabemos que isso significa que precisaremos de mais energia.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Pensamos em crescer, mas ainda não sabemos o quanto isso afetará nossa necessidade de energia.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Estamos mais focados em projetos inovadores e sustentáveis, então o crescimento não é uma urgência para nós.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-4.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-5">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">05</h3>
+							<h2 class="questions__title">Sua empresa já possui iniciativas voltadas para a sustentabilidade?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Sim, sempre tentamos reduzir o nosso impacto ambiental com metas claras.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto"> Não, mas queremos começar a consumir energia sustentável.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Já temos algumas iniciativas, mas queremos fazer mais e de forma mais eficiente. </p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Sustentabilidade é uma palavra nova para nós e não sabemos por onde começar.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-5.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-6">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">06</h3>
+							<h2 class="questions__title">Até que ponto você tem o interesse em adotar energias renováveis, como a solar?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Um pouco interessado.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Muito interessado.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Tenho o interesse, mas não é uma prioridade.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Ainda não pensei sobre isso.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-6.png " alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-7">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">07</h3>
+							<h2 class="questions__title">Sua empresa já faz parte ou tem interesse em migrar para o Mercado Livre de Energia?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Sim, já fazemos parte e gostamos dos resultados.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Estamos pensando nisso, mas não seria uma prioridade no momento.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Não, mas estamos interessados. Porém, parece muito burocrático e não sabemos por onde começar.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Ainda não sabemos o que é.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-7.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-8">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">08</h3>
+							<h2 class="questions__title">Qual o interesse da sua empresa em uma infraestrutura de recarga para veículos elétricos?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Não temos interesse no momento.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Ainda não é uma prioridade para nossa empresa.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Na verdade, queremos estimular o uso de veículos elétricos de outras formas.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Queremos pontos de recarga nas unidades da nossa empresa.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-8.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-9">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">09</h3>
+							<h2 class="questions__title">Como sua empresa quer ajudar o ambiente?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Usando menos energia e gastando menos.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Gerando nossa própria energia a partir de fontes sustentáveis.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Investindo em projetos verdes.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Estimulando o uso de carros elétricos.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-9.png" alt="" /></div>
+				</div>
+				<div class="questions__container container-grid" id="question-10">
+					<div class="questions__holder">
+						<div class="questions__item">
+							<h3 class="questions__number">10</h3>
+							<h2 class="questions__title">Como você deseja lidar com a energia extra que não é usada imediatamente?</h2>
+							<ul class="questions__list">
+								<li>
+									<button class="d-flex questions__option" id="first">
+										<div class="alternativa">a</div>
+										<p class="texto">Ainda não sabemos o que fazer.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="second">
+										<div class="alternativa">b</div>
+										<p class="texto">Queremos armazenar, mas primeiro vamos gerar energia limpa.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="third">
+										<div class="alternativa">c</div>
+										<p class="texto">Armazenar para usar depois e garantir nosso autosustento.</p>
+									</button>
+								</li>
+								<li>
+									<button class="d-flex questions__option" id="fourth">
+										<div class="alternativa">d</div>
+										<p class="texto">Deixar ir embora.</p>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="pagination">
+							<div class="button-reset" id="prev">
+								<button class="button-underlined"><img src="./assets/seta.svg" alt="" /> voltar</button>
+							</div>
+							<ul class="pagination__list">
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+								<li class="active"></li>
+							</ul>
+							<div class="button-reset"><button class="button-underlined" id="reset">reiniciar quiz</button></div>
+						</div>
+					</div>
+					<div class="questions__img"><img src="./assets/Image-10.png" alt="" /></div>
+				</div>
+			</div>
+			<div class="results" id="results">
+				<div class="container-grid">
+					<div class="results__item">
+						<h1 class="results__title"></h1>
+						<div class="results__desc"></div>
+
+						<p class="results__descp"></p>
+
+						<div class="holder__btn">
+							<a href="#" target="_blank" class="button">Entre em contato com a GreenYellow</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="data" style="display: none">
+			<img src="./assets/se.png" alt="" />
+			<img src="./assets/sp.png" alt="" />
+			<img src="./assets/sm.png" alt="" />
+			<img src="./assets/ss.png" alt="" />
+		</div>
+	</main>
+
+	<include src="./html/footer.html"></include>
+</body>

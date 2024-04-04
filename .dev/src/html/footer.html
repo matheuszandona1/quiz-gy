@@ -1,0 +1,221 @@
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+	integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js
+"></script>
+<script>
+	let contagem = {
+		a: 0,
+		b: 0,
+		c: 0,
+		d: 0,
+	}
+
+	$("#startBtn").click(function () {
+		$(this).closest(".holder").hide()
+		$(".questions").find("#question-1")
+		$("#question-1").fadeIn().css("display", "flex")
+	})
+
+	let steps = 1
+
+	$(".questions__option").click(function () {
+		let id = $(this).attr("id")
+		let alternativa = $(this).find(".alternativa").text()
+		contagem[alternativa]++
+
+		removeCurrentStep()
+
+		if (steps < 10) {
+			steps++
+			showCurrentStep()
+
+			if (steps > 1) {
+				$(this).closest("#prev").css("display", "block")
+			}
+		} else {
+			showResults(maisSelecionada())
+		}
+	})
+
+	$("#prev button").click(function () {
+		removeCurrentStep()
+		steps--
+		showCurrentStep()
+	})
+
+	$(".button-reset #reset").click(function () {
+		resetSteps()
+	})
+
+	removeCurrentStep = function () {
+		$(`#question-${steps}`).hide()
+	}
+
+	showCurrentStep = function () {
+		$(`#question-${steps}`).fadeIn().css("display", "flex")
+	}
+
+	resetSteps = function () {
+		removeCurrentStep()
+		$(`#question-1`).fadeIn().css("display", "flex")
+		steps = 1
+	}
+
+	maisSelecionada = function () {
+		let max = 0
+		let maxKey = "a"
+		for (let key in contagem) {
+			if (contagem[key] > max) {
+				max = contagem[key]
+				maxKey = key
+			}
+		}
+		return maxKey
+	}
+
+	showResults = function (alternativa) {
+		// Você precisa mapear as alternativas 'a', 'b', 'c' e 'd' para as chaves correspondentes em 'dados'
+		let mapeamento = {
+			a: "airFryer",
+			b: "pipoqueira",
+			c: "churrasqueira",
+			d: "liquidificador",
+		}
+		let id = mapeamento[alternativa]
+
+		$(".results").show()
+		$(".results__title").text(dados[id].titulo)
+		$(".results__desc").html(dados[id].desc)
+	}
+
+	dados = {
+		airFryer: {
+			titulo: "Mais letra A",
+			desc: `<p><b>Parabéns!</b> Com base nas suas respostas, ficou claro para nós que a solução ideal da GreenYellow para a sua empresa é o <b>Shift Efficiency.</b>
+		<br /><br />
+		Com foco na eficiência energética, nossas soluções são focadas em otimizar seu consumo de energia e reduzir custos operacionais por meio de equipamentos de
+		alta eficiência e revitalização de sistemas existentes (retrofit). Isso inclui mudanças em áreas como:</p>
+		<br /><br />
+		<ul>
+			<li>iluminação;</li>
+			<li>ar-comprimido;</li>
+			<li>refrigeração industrial e comercial;</li>
+			<li>ar-condicionado;</li>
+			<li>automação inteligente.</li>
+		</ul>
+
+		<img src="/res/img/assets/se.png" alt="" />
+
+		<p>Quer ver como isso já deu certo? Um exemplo de como nossas soluções Shift Efficiency podem fazer a diferença é a parceria bem-sucedida que tivemos com a
+		empresa <b>Leroy Merlin.</b></p> <br /><br />
+
+		<p>A GreenYellow implementou um novo design completo de iluminação em <a href=""> 33 lojas da Leroy Merlin,</a> nas quais automatizamos os sistemas de
+		ar-condicionado, e iluminação e instalamos controles de consumo por meio de medição setorizada. E com <b>100% do investimento feito pela GreenYellow.</b> Os
+		resultados? Veja abaixo:</p><br /><br />
+
+		<ul>
+			<li>20% de economia de energia;</li>
+			<li>+ R$6M de economia anual no consumo de energia;</li>
+			<li>15,3 GWh de economia anual no consumo de energia;</li>
+			<li>+ 1.500 toneladas de CO2 evitadas.</li>
+		</ul>
+
+		<br /><br />
+
+		<p><b>Sua empresa pode ser a próxima!</b> Entre em contato conosco e dê o primeiro passo em direção a um futuro mais verde e eficiente.</p>
+	`,
+		},
+		pipoqueira: {
+			titulo: "Mais letra B",
+			desc: `<p><b>Parabéns!</b> Com base nas suas respostas, ficou claro para nós que a solução ideal da GreenYellow para a sua empresa é o <b>Shift Production.</b> </p>
+	    <br /><br /> 
+	   <p> Essa solução é perfeita para empresas que buscam produzir sua própria energia renovável. Está incluído no Shift Production a possibilidade de obter energia através de: </p>
+	    <br /><br /> 
+	    <ul> 
+	      <li>telhados solares;</li> 
+	      <li>fazendas solares;</li> 
+	      <li>carports solares.</li> 
+	    </ul> 
+	   <p> Nossos serviços incluem o desenvolvimento do design do seu projeto de energia renovável, modelagem financeira e contratual, questões fundiárias e de licenciamento ambiental, além da gestão de ativos e garantia de geração e performance da usina.</p> 
+	    <br /><br /> 
+	    <p>E se quiser ver como nossas soluções Shift Production fazem a diferença, confira a nossa parceria com a <b>Claro, líder em telecomunicações na América Latina.</b>Juntos, desenvolvemos usinas solares em todo o país por meio do programa "Energia da Claro".</p>
+		<br><br>
+		<img src="/res/img/assets/se.png" alt="" />
+
+		<p>A GreenYellow foi responsável pelo projeto, implantação e operação de 16 usinas fotovoltaicas da Claro. E os resultados foram os seguintes:</p><br><br>
+    <ul> 
+      <li>mais de 234.000 painéis solares instalados;</li> 
+      <li>mais de 14.800 toneladas de CO2 evitadas;</li> 
+      <li>76,3 MWp de potência instalada;</li> 
+      <li>redução das despesas energéticas;</li> 
+      <li>previsibilidade nos custos.</li> 
+    </ul> 
+	<br><br>
+    <p>Com 100% do investimento feito pela GreenYellow. </p>
+    <br /><br /> 
+    <p>Agora, estamos empolgados para ajudar sua empresa a fazer a transição para uma energia mais limpa e sustentável com nossas soluções Shift Production. </p>
+    <br /><br /> 
+   <p> Entre em contato e vamos começar essa jornada rumo a um futuro mais verde e econômico! 🌞💼</p>
+		
+		`,
+		},
+		churrasqueira: {
+			titulo: "Mais letra C",
+			desc: `<p><b>Parabéns!</b> Com base nas suas respostas, ficou claro para nós que a solução ideal da GreenYellow para a sua empresa é o <b>Shift Services.</b></p>
+	<br /><br />
+	<p>O Shift Services abrange uma variedade de serviços em energia da GreenYellow, incluindo:</p><br /><br />
+	<ul>
+		<li>comercialização de energia;</li>
+		<li>armazenamento de energia;</li>
+		<li>certificados de energia renovável (I-RECs) e créditos de carbono.</li>
+	</ul>
+	<br><br>
+	<p>
+	Gostou e quer saber como isso pode acontecer na prática? Um exemplo de como nossas soluções Shift Services podem fazer a diferença é a parceria que
+	estabelecemos com o <b>Assaí Atacadista,</b> a segunda maior rede brasileira do varejo alimentar.</p>
+
+	<img src="/res/img/assets/sm.png" alt="" />
+
+	<p>Nossa solução incluiu a migração de 34 lojas do <a href="#">Assaí</a> para o Mercado Livre de Energia, com um acordo de 15 anos de venda de energia
+	incentivada, principalmente eólica, e serviços de gestão dos contratos de energia frente à CCEE. Os resultados:</p><br /><br />
+
+	<ul>
+		<li>melhor custo de energia;</li>
+		<li>previsibilidade no orçamento;</li>
+		<li>poder de decisão para garantir a melhor performance;</li>
+		<li>otimização de contratos e operações para uma gestão eficiente.</li>
+	</ul>
+	<br><br>
+	<p>
+	<b>Estamos prontos para ajudar sua empresa!</b> Vamos conversar e entender como as soluções Shift Services podem fazer a diferença para o seu negócio? 🌿💡</p>`,
+		},
+		liquidificador: {
+			titulo: "Mais letra D",
+			desc: `<p><b>Parabéns!</b> Com base nas suas respostas, ficou claro para nós que a solução ideal da GreenYellow para a sua empresa é o <b>Shift Mobility.</b></p>
+	<br /><br />
+	<p>Os serviços Shift Mobility são focados na mobilidade elétrica e incluem infraestrutura de recarga para veículos elétricos em diversos locais, como condomínios
+	empresariais, pontos comerciais e frotas elétricas.</p><br /><br />
+	<p>Com nossa solução "Charge as a Service", cuidamos de tudo, desde a adequação da infraestrutura elétrica do local até a operação, manutenção e fornecimento de
+	energia renovável para o eletroposto, tudo financiado 100% pela GreenYellow.</p>
+	<img src="/res/img/assets/ss.png" alt="" />
+	<br><br>
+	<p>
+	E acredite, os resultados são de tirar o fôlego! Em nossa parceria com o <b>Assaí Atacadista,</b> uma das maiores redes do varejo brasileiro, instalamos mais
+	de 90 pontos de recarga, sendo o maior projeto do tipo em uma varejista no Brasil! Veja os resultados:</p><br /><br />
+
+	<ul>
+		<li>27 lojas prontas em menos de 6 meses;</li>
+		<li>disponibilização de um novo serviço para os clientes;</li>
+		<li>contribuição com a agenda ESG do <a href="#">Assaí</a>.</li>
+	</ul>
+	<br /><br />
+
+	<p>Gostou? Estamos entusiasmados para ajudar sua empresa a fazer parte da revolução da mobilidade elétrica com nossas soluções Shift Mobility!</p><br><br><p>Entre em contato
+	conosco hoje mesmo e vamos trabalhar juntos para um <b>futuro mais sustentável e eficiente! 🚗🔌</b></p>`,
+		},
+	}
+</script>

@@ -1,0 +1,384 @@
+.container-default {
+	padding: 80px 0px;
+	position: relative;
+	@include media(s) {
+		padding: 40px 0px;
+	}
+}
+
+.button {
+	@include button;
+	color: #3d3d3d;
+	background: $amarelo;
+	padding: 24px 32px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+	border-radius: 8px;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	display: block;
+	margin-right: 0px;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	transition: all 0.2s ease-in;
+	text-decoration: none;
+
+	&:after {
+		content: url("../assets/seta.svg");
+		position: absolute;
+		right: 0;
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+	&:hover {
+		padding-right: 42px;
+		color: #fff;
+		background: #87bc25;
+		&:after {
+			right: 15px;
+			opacity: 1;
+		}
+	}
+	&-underlined {
+		text-transform: uppercase;
+		border: none;
+		background: transparent;
+		position: relative;
+		padding: 0px;
+		display: flex;
+		align-items: center;
+		img {
+			margin-right: 10px;
+			transform: rotate(-180deg);
+		}
+		color: $cinza-10;
+		@include option-text;
+		&:before {
+			position: absolute;
+			content: "";
+			height: 1px;
+			width: 0;
+			background-color: $cinza-10;
+			transition: ease-out 0.3s all;
+			bottom: 1px;
+		}
+		&:hover {
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.header {
+	background: #87bc25;
+	padding: 32px 0px;
+	* {
+		padding: 0;
+	}
+	.navbar-collapse {
+		flex-grow: unset;
+	}
+	.container-fluid {
+		width: 100%;
+		padding: 0;
+		@include media(s) {
+			justify-content: space-around;
+		}
+	}
+	.navbar-expand-lg {
+		justify-content: space-between;
+		width: 100%;
+		padding: 0;
+	}
+	.navbar-nav {
+		gap: 24px;
+		@include media(s) {
+			margin-top: 50px;
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+	.nav-item {
+		width: 42px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.navbar-toggler {
+		outline: none;
+		&:focus {
+			outline: none;
+			border: none;
+			appearance: none;
+		}
+	}
+}
+
+.holder {
+	&__infos {
+		display: flex;
+		flex-direction: column;
+		max-width: 577px;
+
+		@include media(s) {
+			padding-top: 0px;
+		}
+	}
+	&__title {
+		@include big-title;
+		font-size: 60px;
+		font-style: normal;
+		text-align: right;
+		font-weight: 800;
+		line-height: 62px; /* 103.333% */
+		letter-spacing: -1.25px;
+		margin: 0;
+		margin-bottom: 24px;
+
+		b {
+			color: #87bc25;
+		}
+		span {
+			color: #fccc1d;
+		}
+	}
+	&__text {
+		@include paragraph;
+		text-align: right;
+		margin-bottom: 24px;
+
+		span {
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 150%;
+			color: #87bc25;
+		}
+
+		@include media(s) {
+			text-align: left;
+		}
+	}
+	.dif {
+		@include paragraph;
+		font-size: 22px;
+		font-style: normal;
+		text-align: right;
+		font-weight: 400;
+		line-height: 150%;
+		margin-bottom: 56px;
+	}
+	&__btn {
+		text-align: right;
+		display: flex;
+		justify-content: end;
+		@include media(s) {
+			justify-content: start;
+		}
+	}
+	&__img {
+		@include media(s) {
+			display: none;
+		}
+		img {
+			transform: scale(0.8);
+		}
+	}
+}
+
+.questions {
+	&__container {
+		display: none;
+	}
+	&__item {
+		margin-bottom: 48px;
+	}
+	&__number {
+		color: #fcb814;
+		font-family: Nunito;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: normal;
+	}
+
+	&__title {
+		@include question;
+		margin-bottom: 48px;
+		color: $cinza-09;
+		font-family: Nunito;
+		font-size: 38px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+		@include media(s) {
+			max-width: 328px;
+			margin: 0 auto;
+			margin-bottom: 32px;
+		}
+		b {
+			@include question-bold;
+		}
+	}
+	&__list {
+		list-style: none;
+		padding: 0;
+		gap: 12px;
+		display: flex;
+		flex-direction: column;
+		@include media(s) {
+			max-width: 328px;
+			margin: 0 auto;
+		}
+	}
+	&__option {
+		gap: 24px;
+		padding: 16px;
+		background: #ffffff;
+		align-items: center;
+		border: 1px solid #224015;
+		border-radius: 12px;
+		height: 98px;
+		width: 100%;
+		transition: all 0.2s ease-in;
+		.alternativa {
+			padding: 14px 21px 13px;
+			transition: all 0.2s ease-in;
+			background: $cinza-01;
+			border-radius: 8px;
+			color: #224015;
+			@include question-bold;
+			text-transform: uppercase;
+		}
+		.texto {
+			margin: 0;
+			@include paragraph;
+			text-align: left;
+		}
+		&:hover {
+			background: rgba(252, 204, 29, 0.13);
+
+			.alternativa {
+				background: #fccc1d;
+				color: #3d3d3d;
+			}
+		}
+	}
+	&__img {
+		@include media(s) {
+			display: none;
+		}
+		img {
+			transform: scale(0.8);
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+	gap: 48px;
+	align-items: center;
+	@include media(s) {
+		flex-wrap: wrap;
+	}
+	&__list {
+		list-style: none;
+		padding: 0px;
+		gap: 8px;
+		margin: 0px;
+		display: flex;
+		li {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background: $cinza-01;
+			&.active {
+				background: $amarelo;
+			}
+		}
+	}
+}
+
+.results {
+	display: none;
+	.container-grid {
+		@include media(s) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	.holder__btn {
+		text-align: start;
+		justify-content: start;
+		flex-wrap: wrap;
+		.texto {
+			margin: 0;
+			@include paragraph;
+			text-align: left;
+			width: 100%;
+			margin: 20px 0;
+			padding-left: 32px;
+		}
+	}
+	&__title {
+		@include option;
+		color: $amarelo;
+		margin: 0;
+		margin-bottom: 24px;
+	}
+
+	&__desc {
+		margin-bottom: 48px;
+		margin-top: 0px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		p {
+			color: $cinza-09;
+			font-family: "Nunito", sans-serif;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			margin: 0;
+		}
+		ul {
+			margin-bottom: 0;
+		}
+		li {
+			font-family: Nunito;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			max-width: 800px;
+			margin: 20px auto 42px;
+			border-radius: 16px;
+		}
+		b {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+		}
+		a {
+			color: #001aff;
+			font-family: Nunito;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			display: inline;
+		}
+	}
+}
