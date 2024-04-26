@@ -40,6 +40,15 @@
 			opacity: 1;
 		}
 	}
+	&-reset {
+		display: inline-block;
+		a {
+			text-decoration: none;
+			&:hover {
+				color: $cinza-10;
+			}
+		}
+	}
 	&-underlined {
 		text-transform: uppercase;
 		border: none;
