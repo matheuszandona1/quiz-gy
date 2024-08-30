@@ -50,7 +50,6 @@ $container: 1240px;
 	justify-content: center;
 }
 .container-default {
-	max-width: $container;
 	margin: 0 auto;
 	@include media(s) {
 		max-width: 328px;

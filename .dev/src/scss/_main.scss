@@ -1,14 +1,22 @@
 .container-default {
-	padding: 80px 0px;
 	position: relative;
+	background-color: #f6f6f6;
 	@include media(s) {
-		padding: 40px 0px;
+		padding: 0;
+		max-width: 100%;
+	}
+}
+.container-first {
+	background-color: $azul;
+	padding: 80px 0;
+	@include media(s) {
+		padding: 40px 24px;
 	}
 }
 
 .button {
 	@include button;
-	color: #3d3d3d;
+	color: #fff;
 	background: $amarelo;
 	padding: 24px 32px;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
@@ -81,7 +89,7 @@
 }
 
 .header {
-	background: #87bc25;
+	background: #fff;
 	padding: 32px 0px;
 	* {
 		padding: 0;
@@ -131,6 +139,9 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 577px;
+		width: 100%;
+		flex-shrink: 0;
+		justify-content: center;
 
 		@include media(s) {
 			padding-top: 0px;
@@ -146,19 +157,20 @@
 		letter-spacing: -1.25px;
 		margin: 0;
 		margin-bottom: 24px;
-
-		b {
-			color: #87bc25;
-		}
+		color: #cbc5b9;
 		span {
-			color: #fccc1d;
+			color: #a08b5e;
+		}
+		@include media(s) {
+			text-align: left;
+			font-size: 32px;
 		}
 	}
 	&__text {
 		@include paragraph;
 		text-align: right;
 		margin-bottom: 24px;
-
+		color: #d2d2d2;
 		span {
 			font-size: 22px;
 			font-style: normal;
@@ -192,22 +204,20 @@
 		@include media(s) {
 			display: none;
 		}
-		img {
-			transform: scale(0.8);
-		}
 	}
 }
 
 .questions {
 	&__container {
 		display: none;
+		padding: 80px 0;
 	}
 	&__item {
 		margin-bottom: 48px;
 	}
 	&__number {
-		color: #fcb814;
-		font-family: Nunito;
+		color: #02aca1;
+		font-family: Inter;
 		font-size: 40px;
 		font-style: normal;
 		font-weight: 900;
@@ -217,8 +227,8 @@
 	&__title {
 		@include question;
 		margin-bottom: 48px;
-		color: $cinza-09;
-		font-family: Nunito;
+		color: #1e1a41;
+		font-family: "Inter", sans-serif;
 		font-size: 38px;
 		font-style: normal;
 		font-weight: 800;
@@ -248,7 +258,7 @@
 		padding: 16px;
 		background: #ffffff;
 		align-items: center;
-		border: 1px solid #224015;
+		border: 1px solid #1e1a41;
 		border-radius: 12px;
 		height: 98px;
 		width: 100%;
@@ -258,7 +268,7 @@
 			transition: all 0.2s ease-in;
 			background: $cinza-01;
 			border-radius: 8px;
-			color: #224015;
+			color: #1e1a41;
 			@include question-bold;
 			text-transform: uppercase;
 		}
@@ -268,11 +278,12 @@
 			text-align: left;
 		}
 		&:hover {
-			background: rgba(252, 204, 29, 0.13);
+			background: rgba(22, 177, 168, 0.13);
 
 			.alternativa {
-				background: #fccc1d;
+				background: #16b1a8;
 				color: #3d3d3d;
+				font-weight: bold;
 			}
 		}
 	}
@@ -305,7 +316,7 @@
 			border-radius: 50%;
 			background: $cinza-01;
 			&.active {
-				background: $amarelo;
+				background: #02aca1;
 			}
 		}
 	}
@@ -313,6 +324,7 @@
 
 .results {
 	display: none;
+	padding: 80px 0;
 	.container-grid {
 		@include media(s) {
 			flex-direction: column-reverse;
@@ -334,7 +346,11 @@
 	}
 	&__title {
 		@include option;
-		color: $amarelo;
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 750;
+		line-height: normal;
+		color: #16b1a8;
 		margin: 0;
 		margin-bottom: 24px;
 	}
@@ -347,24 +363,15 @@
 		flex-direction: column;
 		justify-content: center;
 		p {
-			color: $cinza-09;
-			font-family: "Nunito", sans-serif;
+			color: #1e1a41;
+			font-family: "Inter", sans-serif;
 			font-size: 24px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: normal;
 			margin: 0;
 		}
-		ul {
-			margin-bottom: 0;
-		}
-		li {
-			font-family: Nunito;
-			font-size: 24px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-		}
+
 		img {
 			display: flex;
 			justify-content: center;
@@ -379,10 +386,11 @@
 			font-style: normal;
 			font-weight: 800;
 			line-height: normal;
+			color: #1e1a41;
 		}
 		a {
 			color: #001aff;
-			font-family: Nunito;
+			font-family: Inter;
 			font-size: 24px;
 			font-style: normal;
 			font-weight: 400;
