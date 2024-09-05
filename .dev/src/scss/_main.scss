@@ -14,6 +14,14 @@
 	}
 }
 
+.container__items {
+	display: flex;
+	gap: 40px;
+	.text {
+		max-width: 50%;
+	}
+}
+
 .button {
 	@include button;
 	color: #fff;
@@ -42,7 +50,8 @@
 	&:hover {
 		padding-right: 42px;
 		color: #fff;
-		background: #87bc25;
+		background: #fff;
+		color: #02aca1;
 		&:after {
 			right: 15px;
 			opacity: 1;
@@ -164,6 +173,27 @@
 		@include media(s) {
 			text-align: left;
 			font-size: 32px;
+		}
+		strong {
+			color: #02aca1;
+			font-size: 50px;
+			font-weight: 700;
+			line-height: 62px;
+			letter-spacing: -1.25px;
+		}
+	}
+	&__sub {
+		text-align: right;
+		margin-bottom: 32px;
+		color: #d2d2d2;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 150%; /* 45px */
+		span {
+			margin-top: 16px;
+			display: block;
+			color: #02aca1;
 		}
 	}
 	&__text {
