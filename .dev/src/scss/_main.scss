@@ -17,8 +17,15 @@
 .container__items {
 	display: flex;
 	gap: 40px;
+	@include media(s) {
+		flex-direction: column;
+		padding: 0 24px;
+	}
 	.text {
 		max-width: 50%;
+		@include media(s) {
+			max-width: 100%;
+		}
 	}
 }
 
@@ -410,6 +417,9 @@
 			max-width: 800px;
 			margin: 20px auto 42px;
 			border-radius: 16px;
+			@include media(s) {
+				max-width: 100%;
+			}
 		}
 		b {
 			font-size: 24px;
